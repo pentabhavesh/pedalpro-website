@@ -630,3 +630,631 @@ target="_blank"
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RideX Cycle Rentals</title>
+
+ <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:100;
+  padding:25px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:32px;
+  font-weight:bold;
+  color:#38bdf8;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  transition:0.3s;
+  font-size:16px;
+}
+
+nav a:hover{
+  color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.8)),
+  url('https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?q=80&w=1600&auto=format&fit=crop')
+  center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero-content{
+  max-width:850px;
+}
+
+.hero-content h1{
+  font-size:75px;
+  line-height:1.1;
+  margin-bottom:25px;
+}
+
+.hero-content p{
+  font-size:22px;
+  line-height:1.8;
+  color:#d1d5db;
+  margin-bottom:40px;
+}
+
+/* BUTTON */
+
+.btn{
+  display:inline-block;
+  padding:16px 38px;
+  background:linear-gradient(135deg,#06b6d4,#3b82f6);
+  color:white;
+  text-decoration:none;
+  border-radius:12px;
+  font-weight:bold;
+  transition:0.3s;
+  box-shadow:0 10px 25px rgba(59,130,246,0.4);
+}
+
+.btn:hover{
+  transform:translateY(-5px);
+}
+
+/* FEATURES */
+
+.features{
+  width:90%;
+  max-width:1200px;
+  margin:100px auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.feature-box{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+  padding:40px 30px;
+  border-radius:20px;
+  transition:0.3s;
+}
+
+.feature-box:hover{
+  transform:translateY(-10px);
+  border-color:#38bdf8;
+}
+
+.feature-box h3{
+  font-size:28px;
+  margin-bottom:15px;
+  color:#38bdf8;
+}
+
+.feature-box p{
+  color:#d1d5db;
+  line-height:1.8;
+}
+
+/* PACKAGES */
+.packages{
+  width:90%;
+  max-width:1200px;
+  margin:120px auto;
+  text-align:center;
+}
+
+.packages h2{
+  font-size:55px;
+  margin-bottom:60px;
+}
+
+.package-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:35px;
+}
+
+.package-card{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(145deg,#111827,#1e293b);
+  border-radius:30px;
+  padding:45px;
+  transition:0.4s;
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
+
+.package-card::before{
+  content:'';
+  position:absolute;
+  width:200px;
+  height:200px;
+  background:rgba(56,189,248,0.15);
+  border-radius:50%;
+  top:-80px;
+  right:-80px;
+}
+
+.package-card:hover{
+  transform:translateY(-15px) scale(1.02);
+  border-color:#38bdf8;
+  box-shadow:0 20px 50px rgba(56,189,248,0.25);
+}
+
+.active-card{
+  border:2px solid #38bdf8;
+  transform:scale(1.03);
+}
+
+.top-tag{
+  display:inline-block;
+  background:#334155;
+  color:white;
+  padding:8px 18px;
+  border-radius:30px;
+  font-size:14px;
+  margin-bottom:25px;
+}
+
+.premium-tag{
+  background:linear-gradient(135deg,#06b6d4,#3b82f6);
+}
+
+.package-card h3{
+  font-size:38px;
+  margin-bottom:18px;
+}
+
+.package-desc{
+  color:#cbd5e1;
+  line-height:1.8;
+  margin-bottom:35px;
+}
+
+.price-box{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:25px;
+  border-radius:18px;
+  margin-bottom:22px;
+  transition:0.3s;
+}
+
+.price-box:hover{
+  background:rgba(56,189,248,0.12);
+  transform:scale(1.03);
+}
+
+.price-box span{
+  color:#cbd5e1;
+  font-size:16px;
+}
+
+.price-box h1{
+  font-size:50px;
+  margin-top:10px;
+  color:#22c55e;
+}
+
+.package-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:16px 32px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#06b6d4,#3b82f6);
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+  box-shadow:0 10px 25px rgba(59,130,246,0.35);
+}
+
+.package-btn:hover{
+  transform:translateY(-5px);
+}
+
+@media(max-width:768px){
+
+  .packages h2{
+    font-size:40px;
+  }
+
+  .package-card h3{
+    font-size:30px;
+  }
+
+  .price-box h1{
+    font-size:38px;
+  }
+
+}
+
+/* ABOUT */
+
+.about{
+  width:90%;
+  max-width:1200px;
+  margin:120px auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:50px;
+  align-items:center;
+}
+
+.about img{
+  width:100%;
+  border-radius:25px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+.about-text h2{
+  font-size:50px;
+  margin-bottom:25px;
+}
+
+.about-text p{
+  color:#d1d5db;
+  line-height:1.9;
+  margin-bottom:35px;
+  font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#020617;
+  padding:35px;
+  text-align:center;
+  color:#94a3b8;
+  margin-top:100px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  nav{
+    display:none;
+  }
+
+  .hero-content h1{
+    font-size:48px;
+  }
+
+  .hero-content p{
+    font-size:18px;
+  }
+
+  .packages h2,
+  .about-text h2{
+    font-size:38px;
+  }
+
+}
+
+/* CONTACT SECTION */
+
+.contact{
+  width:90%;
+  max-width:1200px;
+  margin:120px auto;
+  text-align:center;
+}
+
+.contact h2{
+  font-size:50px;
+  margin-bottom:20px;
+}
+
+.contact p{
+  color:#cbd5e1;
+  margin-bottom:50px;
+  font-size:18px;
+}
+
+.contact-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.contact-box{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:40px 30px;
+  border-radius:25px;
+  transition:0.3s;
+}
+
+.contact-box:hover{
+  transform:translateY(-10px);
+  border-color:#38bdf8;
+}
+
+.contact-box h3{
+  font-size:28px;
+  margin-bottom:15px;
+  color:#38bdf8;
+}
+
+.contact-box p,
+.contact-box a{
+  color:#d1d5db;
+  text-decoration:none;
+  line-height:1.8;
+}
+
+/* WHATSAPP FLOAT BUTTON */
+
+.whatsapp-float{
+  position:fixed;
+  width:65px;
+  height:65px;
+  bottom:25px;
+  right:25px;
+  background:#25d366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  z-index:999;
+  transition:0.3s;
+}
+
+.whatsapp-float:hover{
+  transform:scale(1.1);
+}
+
+.whatsapp-float img{
+  width:38px;
+}
+
+</style>
+</head>
+<body>
+
+  <header>
+
+    <div class="logo">PedalPro</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Packages</a>
+      <a href="#">Contact</a>
+    </nav>
+
+  </header>
+
+  <section class="hero">
+
+    <div class="overlay">
+
+      <div class="hero-content">
+
+        <h1>Ride Through The City With Freedom</h1>
+
+        <p>
+          Premium cycle rentals available from 5 AM to 1 AM.
+          Enjoy smooth rides, hourly rentals, and unforgettable adventures.
+        </p>
+
+        <a href="#" class="btn">Book Your Ride</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="features">
+
+    <div class="feature-box">
+      <h3>40+ Premium Cycles</h3>
+      <p>
+        Well-maintained cycles ready for city rides,
+        fitness, and adventure.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Affordable Pricing</h3>
+      <p>
+        Flexible hourly packages designed for every rider.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Easy Booking</h3>
+      <p>
+        Fast and hassle-free slot booking experience.
+      </p>
+    </div>
+
+  </section>
+
+<section class="packages">
+
+  <h2>Choose Your Ride</h2>
+
+  <div class="package-grid">
+
+    <!-- NON GEAR -->
+
+    <div class="package-card">
+
+      <div class="top-tag">Best For Casual Riders</div>
+
+      <h3>Non-Gear Cycle</h3>
+
+      <p class="package-desc">
+        Comfortable city rides with smooth handling and affordable pricing.
+      </p>
+
+      <div class="price-box">
+        <span>1 Hour</span>
+        <h1>₹250</h1>
+      </div>
+
+      <div class="price-box">
+        <span>2 Hours</span>
+        <h1>₹350</h1>
+      </div>
+
+      <a 
+href="https://wa.me/919920455722?text=Hello%20I%20want%20to%20book%20a%20cycle"
+class="package-btn" 
+target="_blank"
+>
+Book Now
+</a>
+
+    </div>
+
+    <!-- GEAR -->
+
+    <div class="package-card active-card">
+
+      <div class="top-tag premium-tag">Most Popular</div>
+
+      <h3>Gear Cycle</h3>
+
+      <p class="package-desc">
+        Built for speed, adventure, and long-distance performance rides.
+      </p>
+
+      <div class="price-box">
+        <span>1 Hour</span>
+        <h1>₹300</h1>
+      </div>
+
+      <div class="price-box">
+        <span>2 Hours</span>
+        <h1>₹500</h1>
+      </div>
+
+
+<a 
+href="https://wa.me/919920455722?text=Hello%20I%20want%20to%20book%20a%20cycle" 
+class="package-btn" 
+target="_blank"
+>
+Book Now
+</a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+  <section class="about">
+
+    <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=1200&auto=format&fit=crop">
+
+    <div class="about-text">
+
+      <h2>Why Choose PedalPro?</h2>
+
+      <p>
+        We provide premium bicycles for riders who want comfort,
+        adventure, and convenience. Whether you're cycling for fitness,
+        travel, or fun — PedalPro gives you the perfect ride experience.
+      </p>
+
+      <a href="#packages" class="btn">Explore Packages</a>
+
+    </div>
+
+  </section>
+
+<section class="contact">
+
+  <h2>Contact Us</h2>
+
+  <p>
+    Ready to ride? Reach out to us for bookings, inquiries, and support.
+  </p>
+
+  <div class="contact-container">
+
+    <div class="contact-box">
+      <h3>Phone</h3>
+      <p>+91 9920455722</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>Email</h3>
+      <p>pedalpro@gmail.com</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>Location</h3>
+      <p>Worli seaface Promenade parking lot Mumbai-4000030, Maharashtra</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+
+<a 
+href="https://wa.me/9920455722" 
+class="whatsapp-float" 
+target="_blank"
+>
+
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+</a>
+
+
+  <footer>
+    © 2026 PedalPro Cycle Rentals. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
